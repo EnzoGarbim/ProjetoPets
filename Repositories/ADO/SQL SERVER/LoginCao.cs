@@ -3,11 +3,11 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Repositories.ADO.SQLServer
 {
-    public class LoginDao
+    public class LoginCao
     {
         private readonly string connectionString;
 
-        public LoginDao(string connectionString)
+        public LoginCao(string connectionString)
         {
             this.connectionString = connectionString;
         }

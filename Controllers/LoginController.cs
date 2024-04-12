@@ -7,12 +7,12 @@ namespace WebApplication1.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly Repositories.ADO.SQLServer.LoginDao repository;
+        private readonly Repositories.ADO.SQLServer.LoginCao repository;
         private readonly Services.ISessao sessao;
 
         public LoginController(IConfiguration configuration, Services.ISessao sessao)
         {            
-            this.repository = new Repositories.ADO.SQLServer.LoginDao(configuration.GetConnectionString(Configurations.Appsettings.getKeyConnectionString()));
+            this.repository = new Repositories.ADO.SQLServer.LoginCao(configuration.GetConnectionString(Configurations.Appsettings.getKeyConnectionString()));
             this.sessao = sessao;
         }
 
